@@ -140,6 +140,7 @@ namespace System.Net.Wunderlist
             ContentType = jtoken.Value<string>("content_type");
             Size = jtoken.Value<int>("file_size");
             LocalCreatedAt = jtoken.Value<DateTime>("local_created_at");
+            Url = jtoken.Value<string>("url");
         }
 
         public uint TaskId { get; internal set; }
@@ -155,6 +156,8 @@ namespace System.Net.Wunderlist
         public int Size { get; internal set; }
 
         public DateTime LocalCreatedAt { get; internal set; }
+
+        public string Url { get; internal set; }
     }
 
     public class Folder : CollectionResource<int>
